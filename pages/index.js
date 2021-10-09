@@ -44,7 +44,6 @@ export default function Home() {
   }
   
   function getFiles(repo, pr) {
-    console.log(pr,'IN get Files')
     axios
       .get(`${repo.url}/pulls/${pr.number}/files`,{
         headers: {
@@ -58,7 +57,6 @@ export default function Home() {
         }
         return prIn  
         })
-        console.log(repo,'reporeporepo')
         dispatch({type: 'updateRepo',repo})
       });
   }
